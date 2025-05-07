@@ -1,0 +1,456 @@
+/* Main font settings */
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #2c3e50;
+    line-height: 1.7;
+}
+
+h1, h2, h3, h4, h5, h6, .navbar-brand {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: #1a365d;
+}
+
+/* Custom color scheme */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #6c757d;
+    --accent-color: #27ae60;
+    --success-color: #2ecc71;
+    --warning-color: #f39c12;
+    --danger-color: #e74c3c;
+    --light-color: #f8f9fa;
+    --dark-color: #2c3e50;
+}
+
+/* Navbar styling - match footer dark theme */
+.navbar {
+    background-color: var(--dark-color) !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    z-index: 1030;
+}
+
+.navbar-brand {
+    font-size: 1.6rem;
+    letter-spacing: 0.5px;
+    color: white !important;
+}
+
+.nav-link {
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 0.2px;
+    color: white !important;
+}
+
+.navbar-toggler {
+    border-color: rgba(255,255,255,0.1);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+/* Dropdown styling for dark navbar */
+.dropdown-menu {
+    background-color: var(--dark-color);
+    border: 1px solid rgba(255,255,255,0.15);
+}
+
+.dropdown-item {
+    color: rgba(255,255,255,0.75) !important;
+}
+
+.dropdown-item:hover {
+    background-color: rgba(255,255,255,0.1);
+    color: white !important;
+}
+
+/* Hero section */
+.hero-section {
+    margin-top: -56px; /* Adjust based on your navbar height */
+    padding-top: 0;
+}
+
+.hero-container {
+    z-index: 0;
+}
+
+.hero-content {
+    opacity: 90%;
+    width: 100vh;
+     /* Limit width for better appearance */
+    position: absolute;
+    bottom: 50px; /* Position from bottom */
+}
+
+.hero-content h1 {
+    font-size: 3.4rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    margin-bottom: 1rem;
+}
+
+.hero-content p.lead {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 1.4rem;
+    letter-spacing: 0.3px;
+    margin-bottom: 1.5rem;
+}
+
+.hero-content .btn-primary {
+    padding: 0.75rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.hero-content .btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+}
+
+/* Section styling */
+section {
+    padding: 70px 0;
+    margin-bottom: 30px; /* Add default bottom margin to all sections */
+}
+
+section h2 {
+    font-size: 2.4rem;
+    letter-spacing: -0.01em;
+    margin-bottom: 1.5rem;
+    color: #1a365d;
+}
+
+section h3 {
+    font-size: 1.8rem;
+    letter-spacing: -0.01em;
+    color: #2c3e50;
+}
+
+section h2:after {
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--accent-color);
+}
+
+/* Improve scroll behavior for section targets */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Add scroll margin to section targets to account for fixed navbar */
+section[id], div[id] {
+    scroll-margin-top: 70px; /* Adjust based on your navbar height */
+}
+
+/* Ensure sections have enough padding at the top */
+#categories-section, #categories, #resources, #mission, #contact {
+    scroll-margin-top: 70px;
+    padding-top: 80px;
+}
+
+/* Card styling */
+.card {
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.12) !important;
+}
+
+/* Category icons */
+.bi-book {
+    color: var(--primary-color) !important;
+}
+
+.bi-flask {
+    color: var(--success-color) !important;
+}
+
+.bi-globe {
+    color: var(--accent-color) !important;
+}
+
+.bi-palette {
+    color: var(--warning-color) !important;
+}
+
+/* Tab navigation */
+.nav-tabs {
+    border-bottom: 1px solid #e9ecef;
+}
+
+.nav-tabs .nav-link {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 0.2px;
+    color: #6c757d !important;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-bottom: 3px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.nav-tabs .nav-link.active {
+    color: var(--primary-color) !important;
+    border-bottom: 3px solid var(--primary-color);
+    background-color: transparent;
+}
+
+.nav-tabs .nav-link:hover:not(.active) {
+    color: var(--primary-color) !important;
+    border-bottom-color: rgba(52, 152, 219, 0.3);
+}
+
+/* Tab content */
+.tab-content {
+    padding-top: 2rem;
+}
+
+/* Text colors */
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.text-success {
+    color: var(--success-color) !important;
+}
+
+.text-info {
+    color: var(--accent-color) !important;
+}
+
+.text-secondary {
+    color: var(--secondary-color) !important;
+}
+
+/* Override background colors */
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+
+.bg-success {
+    background-color: var(--success-color) !important;
+}
+
+.bg-info {
+    background-color: var(--accent-color) !important;
+}
+
+/* Resource cards styling */
+.card .bg-primary h3,
+.card .bg-success h3,
+.card .bg-info h3 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    font-size: 1.4rem;
+}
+
+.card-title {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: -0.01em;
+    margin-bottom: 0.75rem;
+}
+
+.card-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #4a5568;
+}
+
+/* Math tab specific */
+#math .card-title {
+    color: var(--primary-color);
+}
+
+/* Science tab specific */
+#science .card-title {
+    color: var(--success-color);
+}
+
+/* Language tab specific */
+#language .card-title {
+    color: var(--accent-color);
+}
+
+/* Ensure the resources section has enough scroll margin and padding */
+#resources {
+    scroll-margin-top: 80px;
+    padding-top: 80px;
+    position: relative; /* Ensure proper stacking context */
+    z-index: 1; /* Place above potential overlapping elements */
+}
+
+/* Make the heading more visible with some space */
+#resources h1 {
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+/* Featured resources section spacing */
+#featured {
+    scroll-margin-top: 70px;
+    padding-top: 30px; /* Reduce top padding */
+    margin-top: 0; /* Remove top margin */
+    padding-bottom: 100px; /* Add substantial bottom padding */
+    margin-bottom: 50px; /* Add bottom margin */
+}
+
+/* Ensure the carousel has proper spacing */
+#featured .carousel {
+    margin-bottom: 50px;
+}
+
+/* Update scroll margin for new section IDs */
+#home, #introduction, #featured, #categories-section, #categories, 
+#resources, #about, #mission, #contact {
+    scroll-margin-top: 70px;
+}
+
+/* Ensure proper spacing for each section */
+#about {
+    padding-top: 0; /* The about section contains mission and contact */
+}
+
+#mission, #contact {
+    padding-top: 80px;
+}
+
+/* Responsive styles */
+
+/* Base responsive adjustments */
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Hero section responsiveness */
+@media (max-width: 991.98px) {
+    .hero-content {
+        width: 90%;
+        max-width: 600px;
+        bottom: 40px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+    
+    .hero-content p.lead {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .hero-content {
+        width: 95%;
+        bottom: 30px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.4rem;
+    }
+    
+    .hero-content p.lead {
+        font-size: 1.1rem;
+    }
+    
+    .hero-content .btn-primary {
+        padding: 0.6rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+/* Section heading responsiveness */
+@media (max-width: 767.98px) {
+    section h2 {
+        font-size: 2rem;
+    }
+    
+    section h3 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Card responsiveness */
+@media (max-width: 767.98px) {
+    .card {
+        margin-bottom: 20px;
+    }
+    
+    .card-title {
+        font-size: 1.1rem;
+    }
+}
+
+/* Tab navigation responsiveness */
+@media (max-width: 767.98px) {
+    .nav-tabs .nav-link {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+}
+
+/* Featured carousel responsiveness */
+@media (max-width: 991.98px) {
+    #featured .carousel {
+        width: 90% !important;
+    }
+}
+
+@media (max-width: 767.98px) {
+    #featured .carousel {
+        width: 100% !important;
+    }
+}
+
+/* Footer responsiveness */
+@media (max-width: 767.98px) {
+    footer .social-icons {
+        margin-bottom: 20px;
+    }
+    
+    footer h5 {
+        margin-top: 20px;
+    }
+}
+
+/* Fix for hero content on small screens */
+@media (max-width: 575.98px) {
+    .hero-content {
+        width: 100%;
+        position: relative;
+        bottom: auto;
+        left: auto;
+        transform: none;
+        padding: 20px;
+    }
+    
+    .hero-container {
+        height: auto !important;
+        min-height: 70vh;
+    }
+}
